@@ -5,12 +5,12 @@
 |------|----|-------|
 |body|text|-------|
 |image|string|-------|
-|group_id|references :groups|foreign_key: true|
-|user_id|references :users|foreign_key: true|
+|group_id|references :groups|null: false, oreign_key: true|
+|user_id|references :users|null: false, foreign_key: true|
 
 ## Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 
 ## usersテーブル
@@ -43,8 +43,8 @@
 |group_id|references :groups|null: false, foreign_key:true |
 
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 
 
 
