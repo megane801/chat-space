@@ -5,7 +5,7 @@
 |------|----|-------|
 |body|text|-------|
 |image|string|-------|
-|group_id|references :groups|null: false, oreign_key: true|
+|group_id|references :groups|null: false, foreign_key: true|
 |user_id|references :users|null: false, foreign_key: true|
 
 ## Association
