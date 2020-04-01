@@ -2,7 +2,7 @@
   .side-bar-header
     .side-bar-header__box
       .side-bar-header__user-name
-        = current_user.name
+        masa
       .side-bar-header__icons
         .side-bar-header__edit-icon
           = link_to new_group_path do
@@ -14,9 +14,8 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .group
-        = link_to group_messages_path(group) do
+        = link_to '#' do
           .side-bar__current-group
             = group.name
           .side-bar__message
-            = group.show_last_message
           
