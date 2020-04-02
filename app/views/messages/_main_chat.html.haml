@@ -17,6 +17,11 @@
   .chat-main__message-form
     = form_for [@group, @message] do |f|
       .input-box
-        %label{class: "input-box__image"}
+        = f.text_field :content, class: "input-box__text", placeholder: "type a message"
+        = f.label :image, class: 'input-box__image' do
           = icon('fas', 'image', class: 'icon')
-      %input{type: "submit", value:"send", class:"submit-btn"}  
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
+
+
+      
